@@ -31,13 +31,54 @@ header::before{ /*pentru a face doar imaginea de fundal transparenta */
   opacity:0.95;
 }
 
-/* Style the main section */
+/***** DROP DOWN MENU *****/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin:0;
+    background-color: #fff;
+    top: 100%;
+    transform: translateX(-14%);
+    width: inherit;
+    padding: 1%;
+    z-index: 2;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 10%;
+    list-style-type: none;
+  }
+  
+  .dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #000;
+  }
+  
+  .dropdown>a:first-child{
+    padding: 32%;
+  }
+  
+  .dropdown>a:first-child::after{
+    content:"▼";
+  }
+  
+  /***************/
+  
 main {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-/* Style the section inside the main section */
 main>section {
   /*min-height: 50vh;*/
 	display: flex;
@@ -61,14 +102,12 @@ main>section {
 /* Style the article section */
 article {
 	flex: 1 1 75%;
-	padding: 20px;
 }
 
 /* Style the footer section */
 footer {
 	background-color: #333;
 	color: #fff;
-	padding: 20px;
 	text-align: center;
 }
 
@@ -95,7 +134,7 @@ body{
 }
 
 a.nav-link{
-  font-size: 1.5em;
+  font-size: 1.7vw;
   padding: 1%;
 
 }
@@ -142,7 +181,8 @@ img#logo{
   max-height: 100%;
   /*font-family: 'Cinzel Decorative', cursive;*/
   font-family: 'Roboto', sans-serif;
-  font-size: 1.7em;
+  font-size: 2.3vw;
+  text-align: center;
   transition: opacity var(--anim-duration-1) ease-in-out;
   text-shadow: 1px 1px 1px black;
 }
@@ -157,8 +197,8 @@ img#logo{
 }
 
 #albums-container figure img{
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     max-height:100%;
     max-width:100%;
     transition: filter var(--anim-duration-2) ease-in-out;
@@ -213,6 +253,42 @@ h1{
     padding-top:5%;
     margin:0;
 }
+
+@media only screen and (max-width: 750px) {
+    #albums-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    #albums-container figure img{
+        width: 100%;
+        height: 100%;
+        max-height:100%;
+        max-width:100%;
+        transition: filter var(--anim-duration-2) ease-in-out;
+    }
+    .noise-caption{
+        font-size: 3.3vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #albums-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #albums-container figure img{
+        width: 100%;
+        height: 100%;
+        max-height:100%;
+        max-width:100%;
+        transition: filter var(--anim-duration-2) ease-in-out;
+    }
+    .noise-caption{
+        font-size: 5vw;
+    }
+}
+
+
 
 
 
