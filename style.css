@@ -299,11 +299,11 @@ article{
   z-index: 1;
 }
 
-.content figure img:hover{
+/*.content figure img:hover{
   
   animation: blurZoom 0.5s ease-in-out both;
   animation-direction: alternate;
-}
+}*/
 
 @keyframes blurZoom {
   0% {
