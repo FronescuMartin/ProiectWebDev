@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="contact.js"></script>
+
+</head>
+<body>
+	<header>
+        <nav>
+			<a class="nav-link" href="index.html#news-container">News</a>
+			<a class="nav-link" href="countdown.html">Countdown</a>
+			<a class="nav-link" href="music.html">Music</a>
+			<a class="nav-link" href="gallery.html">Gallery</a>
+			<div class="dropdown">
+				<a class="nav-link" href="">Shop</a>
+				<ul class="dropdown-menu">
+				<li><a href="">Nightwish Shop</a></li>
+				<li><a href="">EMP</a></li>
+				<li><a href="">Nuclear Blast</a></li>
+				</ul>
+			</div>
+			<a class="nav-link" href="contact.html">Contact</a>
+		</nav>
+	</header>
+    <main>
+        <div id="container">
+            <h3>CONTACT THE BAND</h3>
+            <form action="" method="post" target="_self">
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <div>
+                        <label for="fullName">Full Name:</label>
+                        <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        required
+                        pattern="^.{3,30}$"
+                        />
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        </select>
+                        <span id="error">Select an option!</span>
+                    </div>
+                    <div>
+                        <label for="birthdate">Birth Date:</label>
+                        <input
+                        type="date"
+                        id="birthdate"
+                        name="birthdate"
+                        required
+                        />
+                        <span id="error3">Date must be after 1800 and before tomorrow.</span>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required pattern="^.+@.+\..+$"/>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        pattern="^[0-9]{4}-[0-9]{3}-[0-9]{3}$"
+                        required
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Message</legend>
+                    <div>
+                        <label for="reason">Reason for contact:</label>
+                        <select id="reason" name="reason">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Male">Collaboration</option>
+                            <option value="Female">Fanmail</option>
+                            <option value="Other">Complaint</option>
+                        </select>
+                        <span id="error2">Select an option!</span>
+                    </div> 
+                    <div>
+                        <label for="message">Message:</label> <br />
+                        <textarea
+                        rows="10"
+                        cols="60"
+                        id="message"
+                        name="message"
+                        required
+                        ></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

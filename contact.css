@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Roboto:wght@300&display=swap');
+
+header{
+    position: sticky;
+    top: 0;
+    color: #fff;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border-bottom: 1px solid #505050;
+  }
+  
+header::before{ /*pentru a face doar imaginea de fundal transparenta */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    content:"";
+    background-image: url("resources/nav.jpg");
+    background-position: 50%, 50%;
+    opacity:0.95;
+}
+
+/***** DROP DOWN MENU *****/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin:0;
+    background-color: #fff;
+    top: 100%;
+    transform: translateX(-14%);
+    width: inherit;
+    padding: 1%;
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10%;
+    list-style-type: none;
+}
+
+.dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.dropdown>a:first-child{
+    padding: 32%;
+}
+
+.dropdown>a:first-child::after{
+    content:"▼";
+}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+
+
+nav a{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+/***************/
+
+
+a.nav-link{
+    font-size: 1.7vw;
+    padding: 1%;
+
+}
+
+
+html {
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('resources/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#container {
+    min-height: 100vh;
+    font-family: Robata;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    background-color: rgba(32, 27, 60, 0.5);
+}
+fieldset div {
+    margin: 12px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    margin-top: 10px;
+}
+
+#error, #error2, #error3{
+    visibility: hidden;
+    color: red;
+}
+
+#response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #5ae4a8;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+h3{
+    font-weight: 100;
+    font-size: 3em;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: white;
+}
+
+
+h2{
+    font-weight: 100;
+    font-size: 2.4em;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: white;
+}
+
+form{
+    width: 35vw;
+    padding-bottom: 10vh;
+}
+
+#fullName{
+    width: 40%;
+}
+
+.successImage{
+    width:55%;
+    height: autp;
+}
+
+
+  

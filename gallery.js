@@ -24,8 +24,6 @@ window.onload=function() {
         showImage(currentImage);
     }
     prevButton.addEventListener("click", prevImage);
-    
-
     nextButton.addEventListener("click", nextImage);
 
     addEventListener("keydown", (event)=>{
@@ -35,6 +33,5 @@ window.onload=function() {
             nextImage();
         }
     });
-    setInterval(nextImage, 5000); //se modifica automat pozele la 5s
 }
   

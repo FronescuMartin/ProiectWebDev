@@ -52,9 +52,9 @@ function getCurrentScale(element) { //folosit pentru a nu fi brusca animatia dac
 
 function getCurrentSaturation(element) {
     let filterValue = window.getComputedStyle(element).getPropertyValue('filter');
-    let saturateIndex = filterValue.indexOf('saturate'); //indexOf metoda din String
+    let saturateIndex = filterValue.indexOf('saturate'); //indexOf() metoda din String
     if (saturateIndex !== -1) {
-        let substr = filterValue.substring(saturateIndex); //substring metoda din String
+        let substr = filterValue.substring(saturateIndex); //substring() metoda din String
         let endIndex = substr.indexOf(')');
         if (endIndex !== -1) {
             let saturationString = substr.substring(9, endIndex); 
@@ -68,6 +68,7 @@ function getCurrentSaturation(element) {
 function newsHover(event){
     animateScale(event.target, getCurrentScale(event.target), 1.05, 500);
     animateSaturation(event.target, getCurrentSaturation(event.target), 150, 500);
+    event.stopPropagation();
 }
 
 function newsHoverLeave(event){
